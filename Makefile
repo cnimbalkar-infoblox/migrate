@@ -3,7 +3,6 @@ DATABASE ?= postgres mysql redshift cassandra spanner cockroachdb yugabytedb cli
 DATABASE_TEST ?= $(DATABASE) sqlite sqlite3 sqlcipher
 BUILD_NUMBER ?= 0
 VERSION ?= $(shell git describe --tags --long --dirty=-unsupported 2>/dev/null | cut -c 2-)-j$(BUILD_NUMBER)
-
 TEST_FLAGS ?=
 REPO_OWNER ?= $(shell cd .. && basename "$$(pwd)")
 COVERAGE_DIR ?= .coverage
